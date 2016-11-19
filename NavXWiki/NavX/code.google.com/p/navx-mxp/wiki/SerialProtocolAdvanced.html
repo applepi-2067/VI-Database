@@ -1,0 +1,453 @@
+
+
+
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/SerialProtocolAdvanced by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="SerialProtocolAdvanced.html" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"domainName": null, "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "relativeBaseUrl": "", "loggedInUserEmail": null, "projectHomeUrl": "/p/navx-mxp", "token": null, "profileUrl": null, "projectName": "navx-mxp", "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/18133036155640238800"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-46776614-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>SerialProtocolAdvanced - 
+ navx-mxp -
+ 
+ 
+ navX MXP Open-source Robotics Navigation sensor - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="https://code.google.com/feeds/p/navx-mxp/svnchanges/basic?path=/wiki/SerialProtocolAdvanced.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/18133036155640238800/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "../../../../apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FSerialProtocolAdvanced&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FSerialProtocolAdvanced" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="https://code.google.com/p/navx-mxp">
+ <a href="https://code.google.com/p/navx-mxp/">
+ 
+ 
+ <img src="https://code.google.com/p/navx-mxp/logo?cct=1417555830"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="https://code.google.com/p/navx-mxp/"><span itemprop="name">navx-mxp</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="https://code.google.com/p/navx-mxp/"><span itemprop="description">navX MXP Open-source Robotics Navigation sensor</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="https://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="https://code.google.com/p/navx-mxp/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="TableOfContents9f2d.html?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="https://code.google.com/p/navx-mxp/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+ 
+ style="padding:0 3px 3px 0; margin:0"
+ 
+ 
+>
+
+ 
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer {
+ padding: 1.5em 2px 2px 2px;
+ min-width: 15em;
+ max-width: 20em;
+ overflow:hidden;
+}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(../../../../ssl.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(../../../../ssl.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { 
+ font-weight: bold;
+ text-decoration: none;
+ color: black !important; 
+ background: #c3d9ff;
+ }
+ .sidebartop ul.treeleafcontainer { display:block;}
+ .sidebarcontent { 
+ vertical-align:top;
+ padding-right: 3px;
+ border-right: 2px solid #ccc;
+ }
+</style>
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td class="sidebarcontent">
+ <div class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right;">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Hide sidebar"><b>&lsaquo;&lsaquo;</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Show sidebar"><b>&rsaquo;&rsaquo;</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <p><strong> Getting Started </strong></p><ul><li><a href="Purchasing.html" rel="nofollow">Where to Buy</a> </li></ul><ul><li><a href="http://kauailabs.com/wp-content/uploads/2014/12/navX_MXP_Datasheet.pdf" rel="nofollow">Datasheet</a> </li></ul><ul><li><a href="FAQ.html">Frequently Asked Questions</a> </li></ul><ul><li><a href="RoboRioInstall.html">Plug-n-Play Installation</a> </li></ul><ul><li><a href="MXPIOExpansion.html">I/O Expansion</a> </li></ul><ul><li><a href="Orientation.html">Orientation</a> </li></ul><ul><li><a href="AdvancedInstallOptions.html">Alternative Installation Options</a> </li></ul><ul><li><a href="GyroAccelCalibration.html">Gyro/Accelerometer Calibration</a> </li></ul><ul><li><a href="Calibration.html">Magnetometer Calibration</a> </li></ul><ul><li><a href="navXMXPUI.html">The navX MXP UI</a> </li></ul><ul><li><a href="Enclosure.html">Creating an Enclosure</a> </li></ul><ul><li><a href="Acknowledgements.html">Acknowledgements</a> </li></ul><p><strong> FRC Software Libraries </strong></p><ul><li><a href="CPlusPlus.html">C++</a> </li></ul><ul><li><a href="Java.html">Java</a> </li></ul><ul><li><a href="Labview.html">Labview</a> </li></ul><ul><li><a href="IMUClass.html">The IMU class</a> </li></ul><ul><li><a href="IMUAdvanced.html">The IMUAdvanced class</a> </li></ul><p><strong> Application Examples </strong></p><ul><li><a href="FieldOrientedDrive.html" rel="nofollow">Field-oriented Drive</a> </li></ul><ul><li><a href="AutoBalancingExample.html">Automatic Balancing</a> </li></ul><ul><li><a href="RotateToAngleExample.html">Rotating to a given Angle</a> </li></ul><ul><li><a href="MotionDetection.html">Motion/No-Motion Detection</a> </li></ul><p><strong> Customization and Troubleshooting </strong></p><ul><li><a href="FirmwareInstallation.html">Firmware Installation</a> </li></ul><ul><li><a href="Troubleshooting.html">Troubleshooting</a> </li></ul><ul><li><a href="FactoryTestProcedure.html" rel="nofollow">Factory Test Procedure</a> </li></ul><ul><li><a href="Support.html">Support</a> </li></ul><p><strong> Advanced Topics </strong></p><ul><li><a href="Specifications.html">Specifications</a> </li></ul><ul><li><a href="SerialProtocolBasic.html">Serial Protocol (Basic)</a> </li></ul><ul><li><a href="https://code.google.com/p/navx/wiki/YawDrift" rel="nofollow">Yaw Drift</a> </li></ul><ul><li><a href="SerialProtocolAdvanced.html">Serial Protocol (Advanced)</a> </li></ul><ul><li><a href="I2C_SPI_Protocols.html">I2C/SPI Protocols</a> </li></ul><ul><li>Advanced Configuration </li></ul><ul><li><a href="References.html">References</a> </li></ul><p><strong> For the Adventurous </strong></p><ul><li><a href="FirmwareCustomization.html">Firmware Customization</a> </li></ul>
+ </div>
+ </div>
+</div>
+
+ </td>
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">SerialProtocolAdvanced</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Tue Dec  2 17:04:47 2014">
+ Dec 2, 2014</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="https://code.google.com/u/104705105116845524465/">scottlib...@gmail.com</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p>In addition to the <a href="SerialProtocolBasic.html">Basic Serial Protocol</a>, the navX MXP firmware implements several messages which may be useful to more advanced users.  </p><h1><a name="Advanced_Messages"></a>Advanced Messages<a href="#Advanced_Messages" class="section_anchor"></a></h1><h2><a name="Quaternion_Data_Update_Message"></a>Quaternion Data Update Message<a href="#Quaternion_Data_Update_Message" class="section_anchor"></a></h2><p>The Quaternion Data update message communicates the Quaternions calculated by the Digital Motion Procssor, as well as some of the raw sensors readings; this update message may be useful when the Yaw/Pitch/Roll/Compass Heading provides insufficient information: </p><ul><li>With the quaternions and the raw acceleration data, the world linear acceleration (the true acceleration, with the gravity component removed) can be calculated.  Note that the acceleration raw data has already had calibration applied. </li></ul><ul><li>Additionally, with the raw magnetometer data, it is possible to implement soft iron calibration.  Note that the raw magnetometer data has already had hard iron calibration applied. </li></ul><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Byte Offset</td><td style="border: 1px solid #ccc; padding: 5px;">Element</td><td style="border: 1px solid #ccc; padding: 5px;">Data Type</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion W (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">4</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion X (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">8</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion Y (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">12</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion Z (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">16</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration X (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">20</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration Y (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">24</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration Z (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">28</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer X (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">32</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer Y (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">36</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer Z (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">40</td><td style="border: 1px solid #ccc; padding: 5px;">Temperature (Centigrade degrees)</td><td style="border: 1px solid #ccc; padding: 5px;">Float</td></tr>  </table></p><h2><a name="Gyro_Data_Update_Message"></a>Gyro Data Update Message<a href="#Gyro_Data_Update_Message" class="section_anchor"></a></h2><p>The Gyro Data update message communicates the raw gyro, accelerometer, magnetometer and temperature data.  This data bypasses the Digital Motion Processor, and allows the individual sensors to be used directly without any intervening processing.  This can allow the following types of use: </p><ul><li>Access to instantaneous measures of angular velocity in each of the X, Y and Z axes, provided by the tri-axial gyroscopes.  Note that the gyroscope data has already had calibration applied. </li></ul><ul><li>Additionally, with the raw magnetometer data, it is possible to implement soft iron calibration.  Note that the raw magnetometer data has already had hard iron calibration applied. </li></ul><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Byte Offset</td><td style="border: 1px solid #ccc; padding: 5px;">Element</td><td style="border: 1px solid #ccc; padding: 5px;">Data Type</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0</td><td style="border: 1px solid #ccc; padding: 5px;">Gyro X (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">4</td><td style="border: 1px solid #ccc; padding: 5px;">Gyro Y (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">8</td><td style="border: 1px solid #ccc; padding: 5px;">Gyro Z (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">12</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration X (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">16</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration Y (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">20</td><td style="border: 1px solid #ccc; padding: 5px;">Acceleration Z (16-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">24</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer X (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">28</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer Y (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">32</td><td style="border: 1px solid #ccc; padding: 5px;">Magnetometer Z (12 bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">36</td><td style="border: 1px solid #ccc; padding: 5px;">Temperature (Centigrade degrees)</td><td style="border: 1px solid #ccc; padding: 5px;">Float</td></tr>  </table></p><h2><a name="Stream_Configuration_Command"></a>Stream Configuration Command<a href="#Stream_Configuration_Command" class="section_anchor"></a></h2><p>By default, the nav6 IMU begins transmitting YPR Updates upon power up.  The Stream Configuration Command is sent to the nav6 in order to change the type of Streaming Update message the nav6 will transmit to the client. </p><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Byte Offset</td><td style="border: 1px solid #ccc; padding: 5px;">Element</td><td style="border: 1px solid #ccc; padding: 5px;">Data Type</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0</td><td style="border: 1px solid #ccc; padding: 5px;">Stream Type (YPR or Raw)</td><td style="border: 1px solid #ccc; padding: 5px;">8-bit ASCII Character</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">1</td><td style="border: 1px solid #ccc; padding: 5px;">Update Rate (Hz) - Valid range:  4-100</td><td style="border: 1px solid #ccc; padding: 5px;">8-bit Integer</td></tr>  </table></p><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Stream Type</td><td style="border: 1px solid #ccc; padding: 5px;">Description</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">&#x27;y&#x27;</td><td style="border: 1px solid #ccc; padding: 5px;">Yaw, Pitch, Roll &amp; Compass Heading Update</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">&#x27;q&#x27;</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion Data Update</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">&#x27;g&#x27;</td><td style="border: 1px solid #ccc; padding: 5px;">Gyro Data Update</td></tr>  </table></p><h2><a name="Stream_Configuration_Response"></a>Stream Configuration Response<a href="#Stream_Configuration_Response" class="section_anchor"></a></h2><p>Whenever a Stream Configuration Command is received by the nav6, the nav6 responds by sending a Stream Configuration Response message, which is formatted as follows: </p><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Byte Offset</td><td style="border: 1px solid #ccc; padding: 5px;">Element</td><td style="border: 1px solid #ccc; padding: 5px;">Data Type</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0</td><td style="border: 1px solid #ccc; padding: 5px;">Stream Type (YPR or Raw)</td><td style="border: 1px solid #ccc; padding: 5px;">8-bit ASCII Character</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">1</td><td style="border: 1px solid #ccc; padding: 5px;">Gyroscope Full Scale Range (Degrees/sec)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">5</td><td style="border: 1px solid #ccc; padding: 5px;">Accelerometer Full Scale Range (G)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">9</td><td style="border: 1px solid #ccc; padding: 5px;">Update Rate (Hz)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">13</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Yaw Offset (Degrees)</td><td style="border: 1px solid #ccc; padding: 5px;">Float</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">20</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion W Offset (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">24</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion X Offset (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">28</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Y Offset (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">32</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Z Offset (15-bits, signed)</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">36</td><td style="border: 1px solid #ccc; padding: 5px;">Flags</td><td style="border: 1px solid #ccc; padding: 5px;">16-bit Integer</td></tr>  </table></p><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Flag value</td><td style="border: 1px solid #ccc; padding: 5px;">Desription</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0, 1</td><td style="border: 1px solid #ccc; padding: 5px;">Startup Gyro Calibration in progress</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">2</td><td style="border: 1px solid #ccc; padding: 5px;">Startup Gyro Calibration complete</td></tr>  </table></p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FSerialProtocolAdvanced&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FSerialProtocolAdvanced"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="https://code.google.com/p/navx-mxp/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="SerialProtocolAdvanced" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="https://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="https://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/SerialProtocolAdvanced by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:34 GMT -->
+</html>
+
+

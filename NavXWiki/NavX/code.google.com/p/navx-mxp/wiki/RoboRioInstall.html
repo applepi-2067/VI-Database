@@ -1,0 +1,453 @@
+
+
+
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/RoboRioInstall by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="RoboRioInstall.html" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"assetVersionPath": "https://ssl.gstatic.com/codesite/ph/18133036155640238800", "projectName": "navx-mxp", "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "relativeBaseUrl": "", "loggedInUserEmail": null, "token": null, "projectHomeUrl": "/p/navx-mxp", "profileUrl": null, "domainName": null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-46776614-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>RoboRioInstall - 
+ navx-mxp -
+ 
+ 
+ navX MXP Open-source Robotics Navigation sensor - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="https://code.google.com/feeds/p/navx-mxp/svnchanges/basic?path=/wiki/RoboRioInstall.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/18133036155640238800/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "../../../../apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FRoboRioInstall&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FRoboRioInstall" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="https://code.google.com/p/navx-mxp">
+ <a href="https://code.google.com/p/navx-mxp/">
+ 
+ 
+ <img src="https://code.google.com/p/navx-mxp/logo?cct=1417555830"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="https://code.google.com/p/navx-mxp/"><span itemprop="name">navx-mxp</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="https://code.google.com/p/navx-mxp/"><span itemprop="description">navX MXP Open-source Robotics Navigation sensor</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="https://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="https://code.google.com/p/navx-mxp/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="TableOfContents9f2d.html?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="https://code.google.com/p/navx-mxp/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+ 
+ style="padding:0 3px 3px 0; margin:0"
+ 
+ 
+>
+
+ 
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer {
+ padding: 1.5em 2px 2px 2px;
+ min-width: 15em;
+ max-width: 20em;
+ overflow:hidden;
+}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(../../../../ssl.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(../../../../ssl.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { 
+ font-weight: bold;
+ text-decoration: none;
+ color: black !important; 
+ background: #c3d9ff;
+ }
+ .sidebartop ul.treeleafcontainer { display:block;}
+ .sidebarcontent { 
+ vertical-align:top;
+ padding-right: 3px;
+ border-right: 2px solid #ccc;
+ }
+</style>
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td class="sidebarcontent">
+ <div class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right;">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Hide sidebar"><b>&lsaquo;&lsaquo;</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Show sidebar"><b>&rsaquo;&rsaquo;</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <p><strong> Getting Started </strong></p><ul><li><a href="Purchasing.html" rel="nofollow">Where to Buy</a> </li></ul><ul><li><a href="http://kauailabs.com/wp-content/uploads/2014/12/navX_MXP_Datasheet.pdf" rel="nofollow">Datasheet</a> </li></ul><ul><li><a href="FAQ.html">Frequently Asked Questions</a> </li></ul><ul><li><a href="RoboRioInstall.html">Plug-n-Play Installation</a> </li></ul><ul><li><a href="MXPIOExpansion.html">I/O Expansion</a> </li></ul><ul><li><a href="Orientation.html">Orientation</a> </li></ul><ul><li><a href="AdvancedInstallOptions.html">Alternative Installation Options</a> </li></ul><ul><li><a href="GyroAccelCalibration.html">Gyro/Accelerometer Calibration</a> </li></ul><ul><li><a href="Calibration.html">Magnetometer Calibration</a> </li></ul><ul><li><a href="navXMXPUI.html">The navX MXP UI</a> </li></ul><ul><li><a href="Enclosure.html">Creating an Enclosure</a> </li></ul><ul><li><a href="Acknowledgements.html">Acknowledgements</a> </li></ul><p><strong> FRC Software Libraries </strong></p><ul><li><a href="CPlusPlus.html">C++</a> </li></ul><ul><li><a href="Java.html">Java</a> </li></ul><ul><li><a href="Labview.html">Labview</a> </li></ul><ul><li><a href="IMUClass.html">The IMU class</a> </li></ul><ul><li><a href="IMUAdvanced.html">The IMUAdvanced class</a> </li></ul><p><strong> Application Examples </strong></p><ul><li><a href="FieldOrientedDrive.html" rel="nofollow">Field-oriented Drive</a> </li></ul><ul><li><a href="AutoBalancingExample.html">Automatic Balancing</a> </li></ul><ul><li><a href="RotateToAngleExample.html">Rotating to a given Angle</a> </li></ul><ul><li><a href="MotionDetection.html">Motion/No-Motion Detection</a> </li></ul><p><strong> Customization and Troubleshooting </strong></p><ul><li><a href="FirmwareInstallation.html">Firmware Installation</a> </li></ul><ul><li><a href="Troubleshooting.html">Troubleshooting</a> </li></ul><ul><li><a href="FactoryTestProcedure.html" rel="nofollow">Factory Test Procedure</a> </li></ul><ul><li><a href="Support.html">Support</a> </li></ul><p><strong> Advanced Topics </strong></p><ul><li><a href="Specifications.html">Specifications</a> </li></ul><ul><li><a href="SerialProtocolBasic.html">Serial Protocol (Basic)</a> </li></ul><ul><li><a href="https://code.google.com/p/navx/wiki/YawDrift" rel="nofollow">Yaw Drift</a> </li></ul><ul><li><a href="SerialProtocolAdvanced.html">Serial Protocol (Advanced)</a> </li></ul><ul><li><a href="I2C_SPI_Protocols.html">I2C/SPI Protocols</a> </li></ul><ul><li>Advanced Configuration </li></ul><ul><li><a href="References.html">References</a> </li></ul><p><strong> For the Adventurous </strong></p><ul><li><a href="FirmwareCustomization.html">Firmware Customization</a> </li></ul>
+ </div>
+ </div>
+</div>
+
+ </td>
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">RoboRioInstall</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Sat Jan 10 09:30:22 2015">
+ Jan 10 (5 days ago)</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="https://code.google.com/u/104705105116845524465/">scottlib...@gmail.com</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p>The navX MXP is designed to be plug-n-play with the National Instruments RoboRio.  This installation takes about only a minute. </p><h3><a name="Installing_the_navX_MXP"></a>Installing the navX MXP<a href="#Installing_the_navX_MXP" class="section_anchor"></a></h3><p>To install, simply place the 34-pin &quot;MXP&quot; Connector on the bottom of the navX MXP into the corresponding MXP slot on the top of the RoboRio, as shown below. </p><p><img src="../../../../www.kauailabs.com/store/image/data/MountingOnARoboRio.jpg" /> </p><h3><a name="Securing_the_navX_MXP_to_the_RoboRio"></a>Securing the navX MXP to the RoboRio<a href="#Securing_the_navX_MXP_to_the_RoboRio" class="section_anchor"></a></h3><p>Next, secure the navX MXP to the RoboRio using two #4-40 screws, each with a length of 3/16th inch.  You can also use a 1/4 inch-long screw if you place a small washer between it and the top of the navX MXP MXP board. </p><p><img src="../../../../navx-mxp.googlecode.com/svn/trunk/images/navx-mxp-screws.png" /> </p><h3><a name="Securing_the_navX_MXP_and_RoboRio_to_the_robot_chassis"></a>Securing the navX MXP and RoboRio to the robot chassis<a href="#Securing_the_navX_MXP_and_RoboRio_to_the_robot_chassis" class="section_anchor"></a></h3><p>The navX MXP should be mounted such that it is firmly attached to the robot chassis.  <i><strong>The quality of this mounting will be directly reflected in the quality of the inertial measurements provided by the navX MXP.</strong></i>  To ensure quality, carefully follow these guidelines: </p><ul><li>The RoboRio on which the navX is placed should be tightly mounted; it should be a part of the chassis mass, and should move exactly as the chassis moves.  Avoid mounting the navX MXP in an area of the chassis that might be flexible, as this could introduce vibration to the inertial sensors that does not represent the chassis inertial properties. </li></ul><ul><li>The navX MXP should be mounted in the center of the chassis, which ensures the origin of the yaw/pitch/roll axes truly represent the chassis center. </li></ul><ul><li>Be sure to understand the <a href="Orientation.html">orientation</a> of the navX MXP, relative to the chassis. </li></ul><ul><li>Housing the navX MXP in some form of <a href="Enclosure.html">protective enclosure</a> is highly recommended, to protect it from damage.  This should both protect the circuit board from damage, and provide strain relief for the cables that connect to the navX MXP. </li></ul><p>(Note that there are several other <a href="AdvancedInstallOptions.html">installation options</a> available.) </p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FRoboRioInstall&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FRoboRioInstall"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="https://code.google.com/p/navx-mxp/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="RoboRioInstall" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="https://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="https://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/RoboRioInstall by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:08 GMT -->
+</html>
+
+

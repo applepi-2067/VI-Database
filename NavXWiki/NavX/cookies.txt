@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.google.com	TRUE	/	FALSE	1999999999	PREF	ID=0cf263d6ed9a245d:TM=1421361573:LM=1421361573:S=ZS0FRHPoGFH0ubIm
+.google.com	TRUE	/	FALSE	1999999999	NID	67=Ogt5XLCt-vl6ywsqsgQ97XWvqceahVqn9ap5bkiYEdGbDLa5V_Gth7dl9UixrpC7wL9WY-XEGyN2j8cpqcjyeFzSRoTWojsY9MChtfkZrKMBYVy921EJxkyZ2x3OGfl0
+.kauailabs.com	TRUE	/	FALSE	1999999999	__cfduid	dc242d429f349e9f3854ca2a671dc88f11421361590
+
