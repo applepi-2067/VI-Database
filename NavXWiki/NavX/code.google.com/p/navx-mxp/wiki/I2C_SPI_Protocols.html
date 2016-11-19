@@ -1,0 +1,457 @@
+
+
+
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/I2C_SPI_Protocols by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="I2C_SPI_Protocols.html" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"relativeBaseUrl": "", "loggedInUserEmail": null, "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/18133036155640238800", "projectHomeUrl": "/p/navx-mxp", "projectName": "navx-mxp", "domainName": null, "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "profileUrl": null, "token": null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-46776614-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>I2C_SPI_Protocols - 
+ navx-mxp -
+ 
+ 
+ navX MXP Open-source Robotics Navigation sensor - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="https://code.google.com/feeds/p/navx-mxp/svnchanges/basic?path=/wiki/I2C_SPI_Protocols.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/18133036155640238800/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "../../../../apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FI2C_SPI_Protocols&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FI2C_SPI_Protocols" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="https://code.google.com/p/navx-mxp">
+ <a href="https://code.google.com/p/navx-mxp/">
+ 
+ 
+ <img src="https://code.google.com/p/navx-mxp/logo?cct=1417555830"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="https://code.google.com/p/navx-mxp/"><span itemprop="name">navx-mxp</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="https://code.google.com/p/navx-mxp/"><span itemprop="description">navX MXP Open-source Robotics Navigation sensor</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="https://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="https://code.google.com/p/navx-mxp/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="TableOfContents9f2d.html?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="https://code.google.com/p/navx-mxp/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+ 
+ style="padding:0 3px 3px 0; margin:0"
+ 
+ 
+>
+
+ 
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer {
+ padding: 1.5em 2px 2px 2px;
+ min-width: 15em;
+ max-width: 20em;
+ overflow:hidden;
+}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(../../../../ssl.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(../../../../ssl.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { 
+ font-weight: bold;
+ text-decoration: none;
+ color: black !important; 
+ background: #c3d9ff;
+ }
+ .sidebartop ul.treeleafcontainer { display:block;}
+ .sidebarcontent { 
+ vertical-align:top;
+ padding-right: 3px;
+ border-right: 2px solid #ccc;
+ }
+</style>
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td class="sidebarcontent">
+ <div class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right;">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Hide sidebar"><b>&lsaquo;&lsaquo;</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Show sidebar"><b>&rsaquo;&rsaquo;</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <p><strong> Getting Started </strong></p><ul><li><a href="Purchasing.html" rel="nofollow">Where to Buy</a> </li></ul><ul><li><a href="http://kauailabs.com/wp-content/uploads/2014/12/navX_MXP_Datasheet.pdf" rel="nofollow">Datasheet</a> </li></ul><ul><li><a href="FAQ.html">Frequently Asked Questions</a> </li></ul><ul><li><a href="RoboRioInstall.html">Plug-n-Play Installation</a> </li></ul><ul><li><a href="MXPIOExpansion.html">I/O Expansion</a> </li></ul><ul><li><a href="Orientation.html">Orientation</a> </li></ul><ul><li><a href="AdvancedInstallOptions.html">Alternative Installation Options</a> </li></ul><ul><li><a href="GyroAccelCalibration.html">Gyro/Accelerometer Calibration</a> </li></ul><ul><li><a href="Calibration.html">Magnetometer Calibration</a> </li></ul><ul><li><a href="navXMXPUI.html">The navX MXP UI</a> </li></ul><ul><li><a href="Enclosure.html">Creating an Enclosure</a> </li></ul><ul><li><a href="Acknowledgements.html">Acknowledgements</a> </li></ul><p><strong> FRC Software Libraries </strong></p><ul><li><a href="CPlusPlus.html">C++</a> </li></ul><ul><li><a href="Java.html">Java</a> </li></ul><ul><li><a href="Labview.html">Labview</a> </li></ul><ul><li><a href="IMUClass.html">The IMU class</a> </li></ul><ul><li><a href="IMUAdvanced.html">The IMUAdvanced class</a> </li></ul><p><strong> Application Examples </strong></p><ul><li><a href="FieldOrientedDrive.html" rel="nofollow">Field-oriented Drive</a> </li></ul><ul><li><a href="AutoBalancingExample.html">Automatic Balancing</a> </li></ul><ul><li><a href="RotateToAngleExample.html">Rotating to a given Angle</a> </li></ul><ul><li><a href="MotionDetection.html">Motion/No-Motion Detection</a> </li></ul><p><strong> Customization and Troubleshooting </strong></p><ul><li><a href="FirmwareInstallation.html">Firmware Installation</a> </li></ul><ul><li><a href="Troubleshooting.html">Troubleshooting</a> </li></ul><ul><li><a href="FactoryTestProcedure.html" rel="nofollow">Factory Test Procedure</a> </li></ul><ul><li><a href="Support.html">Support</a> </li></ul><p><strong> Advanced Topics </strong></p><ul><li><a href="Specifications.html">Specifications</a> </li></ul><ul><li><a href="SerialProtocolBasic.html">Serial Protocol (Basic)</a> </li></ul><ul><li><a href="https://code.google.com/p/navx/wiki/YawDrift" rel="nofollow">Yaw Drift</a> </li></ul><ul><li><a href="SerialProtocolAdvanced.html">Serial Protocol (Advanced)</a> </li></ul><ul><li><a href="I2C_SPI_Protocols.html">I2C/SPI Protocols</a> </li></ul><ul><li>Advanced Configuration </li></ul><ul><li><a href="References.html">References</a> </li></ul><p><strong> For the Adventurous </strong></p><ul><li><a href="FirmwareCustomization.html">Firmware Customization</a> </li></ul>
+ </div>
+ </div>
+</div>
+
+ </td>
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">I2C_SPI_Protocols</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Sat Jan 10 08:47:00 2015">
+ Jan 10 (5 days ago)</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="https://code.google.com/u/104705105116845524465/">scottlib...@gmail.com</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p>In addition to the streaming Serial protocol, the navX MXP may be accessed over the I2C and SPI buses, using a register-based protocol.  This page documents the register-based protocol used on both the I2C and SPI bus. </p><h2><a name="Register-based_protocol_overview"></a>Register-based protocol overview<a href="#Register-based_protocol_overview" class="section_anchor"></a></h2><p>Unlike the streaming Serial protocol, which periodically sends out updates messages whenever new data is available, the register based protocol is a &quot;polled&quot; interface, in that the consumer of the navX MXP data (in this case referred to as a &quot;bus master&quot;) can request data from the navX MXP at any time.  At the same time, when using the register-based protocol the bus master does not know when new data is available. </p><p>To help this situation, a timestamp - which is updated whenever new data is available - is made available.  Therefore, the general approach to ensure each new data sample is retrieved is to regularly (at the navX MXP update rate) retrieve both the timestamp and the data of interest), and if the timestamp differs from the previous timestamp by the update rate as expressed in milliseconds, then the data sample just retrieved is current, and no data has been missed. </p><h2><a name="I2C_Overview"></a>I2C Overview<a href="#I2C_Overview" class="section_anchor"></a></h2><p>The navX MXP responds to 7-bit address 50 (0x32) on the I2C bus.  If accessing the navX MXP via the MXP I2C bus, ensure that no other device at that address is on the same bus. </p><p>The navX MXP I2C bus operates at a speed up to 400Khz. </p><p>When accessing the navX MXP via the I2C bus, this following pattern is used: </p><p>- The I2C bus master sends the navX MXP I2C address.  The highest bit is set to indicate the bus master intends to write to the navX MXP.  If the highest bit is clear, this indicates the bus master intends to read from the navX MXP. </p><p>- The I2C bus master next sends the starting register address it intends to write to or read from. </p><p>- The I2C bus master next initiates I2C bus transactions.  The navX MXP supports I2C burst mode for read operations, therefore the navX MXP will respond with register values as long as the I2C bus master continues the transaction, and as long as the last register address has not yet been reached. </p><p>If instead the I2C bus master intends to write data to a writable navX MXP register, the bus master should transmit the new register value immediately after sending the register address. </p><h2><a name="SPI_Overview"></a>SPI Overview<a href="#SPI_Overview" class="section_anchor"></a></h2><p>The navX MXP SPI data is communicated as follows: </p><blockquote>- Most-significant bit first 
+- Maximum Bitrate:  2mbps 
+- Clock Polarity/Clock Phase - Mode 3 
+</blockquote><p><img src="../../../../navx-mxp.googlecode.com/svn/trunk/images/spi_polarity_and_phase.png" /> </p><p>When accessing the navX MXP via the SPI bus, this following pattern is used: </p><p>- When the SPI bus master is not communicating with the navX MXP, the SPI bus master must hold the chip select (CS) line high. </p><p>- The SPI bus master lowers the CS line. </p><p>- The SPI bus master next transmits the register address it intends to read from or write to.  If writing, the upper bit (0x80) must be set; if this upper bit is clear, this indicates a read transaction. </p><p>- If the SPI bus master is reading, it next transmits the count of registers it wishes to read from.  This count must be at least 1, and must be not exceed the maximum register address less the requested register address.   </p><p>- If the SPI bus master is writing, it transmits the register value to be written to the specified register address.   </p><p>- The SPI bus master finally transmits an 8-bit cyclic-redundancy code (CRC) value (see CRC calculation section) which is calculated on the register address and count values previously transmitted. </p><p>- If the SPI bus master is writing, it raises the CS line to complete the write sequence. </p><p>- If the SPI bus master is reading: </p><p>- The SPI bus master raises the CS line. </p><p>- The SPI bus master delays for 200 microseconds, giving the navX MXP sufficient time to prepare for the upcoming SPI bus transaction. </p><p>- The SPI bus master lowers the CS line. </p><blockquote>- The SPI bus master initiates a series of SPI bus transactions, where the number of individual 8-bit transfers is equal to the count previously specified, plus one additional transfer for a CRC value transmitted by the nav MXP. 
+</blockquote><p>- The SPI bus master raises the CS line to complete the read sequence. </p><h2><a name="navX_MXP_Register_Map"></a>navX MXP Register Map<a href="#navX_MXP_Register_Map" class="section_anchor"></a></h2><p> <table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;">Address (Hex)</td><td style="border: 1px solid #ccc; padding: 5px;">Name</td><td style="border: 1px solid #ccc; padding: 5px;">Range/Data Type</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x00</td><td style="border: 1px solid #ccc; padding: 5px;">WhoAmI</td><td style="border: 1px solid #ccc; padding: 5px;">50 (0x32):  navX MXP</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x01</td><td style="border: 1px solid #ccc; padding: 5px;">Board Revision</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned byte</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x02</td><td style="border: 1px solid #ccc; padding: 5px;">Firmware Major Version</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned byte</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x03</td><td style="border: 1px solid #ccc; padding: 5px;">Firmware Minor Version</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned byte</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x04</td><td style="border: 1px solid #ccc; padding: 5px;">Update Rate</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned byte (Hz)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x05</td><td style="border: 1px solid #ccc; padding: 5px;">Accel FSR</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned byte (Degrees/Sec)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x06-0x07</td><td style="border: 1px solid #ccc; padding: 5px;">Gyro FSR</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned short(G)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x08</td><td style="border: 1px solid #ccc; padding: 5px;">Operational Status</td><td style="border: 1px solid #ccc; padding: 5px;">NAVX_OP_STATUS_XXX</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x09</td><td style="border: 1px solid #ccc; padding: 5px;">Calibration Status</td><td style="border: 1px solid #ccc; padding: 5px;">NAVX_CAL_STATUS_XXX</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x0A</td><td style="border: 1px solid #ccc; padding: 5px;">Self-test Status</td><td style="border: 1px solid #ccc; padding: 5px;">NAVX_SELFTEST_STATUS_XXX</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x0B-0x0F</td><td style="border: 1px solid #ccc; padding: 5px;">Reserved</td><td style="border: 1px solid #ccc; padding: 5px;"></td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x10</td><td style="border: 1px solid #ccc; padding: 5px;">Sensor Status (low)</td><td style="border: 1px solid #ccc; padding: 5px;">NAVX_SENSOR_STATUS_XXX</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x11</td><td style="border: 1px solid #ccc; padding: 5px;">Sensor Status (high)</td><td style="border: 1px solid #ccc; padding: 5px;">&quot;&quot;</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x12-0x15</td><td style="border: 1px solid #ccc; padding: 5px;">Current Timestamp</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned long</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x16-0x17</td><td style="border: 1px solid #ccc; padding: 5px;">Yaw</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Packed Hundredths (Degrees)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x18-0x19</td><td style="border: 1px solid #ccc; padding: 5px;">Pitch</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Packed Hundredths (Degrees)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x1A-0x1B</td><td style="border: 1px solid #ccc; padding: 5px;">Roll</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Packed Hundredths (Degrees)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x1C-0x1D</td><td style="border: 1px solid #ccc; padding: 5px;">Heading</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned Packed Hundredths (Degrees)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x1E-0x1F</td><td style="border: 1px solid #ccc; padding: 5px;">Fused Heading</td><td style="border: 1px solid #ccc; padding: 5px;">Unsigned Packed Hundredths (Degrees))</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x20-0x23</td><td style="border: 1px solid #ccc; padding: 5px;">Altitude</td><td style="border: 1px solid #ccc; padding: 5px;">NavX MXP Aero Only (Meters)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x24-0x25</td><td style="border: 1px solid #ccc; padding: 5px;">Linear Acceleration (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Thousandths (G)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x26-0x27</td><td style="border: 1px solid #ccc; padding: 5px;">Linear Acceleration (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Thousandths (G)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x28-0x29</td><td style="border: 1px solid #ccc; padding: 5px;">Linear Acceleration (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Thousandths (G)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x2A-0x2B</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion (W)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x2C-0x2D</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x2E-0x2F</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x30-0x31</td><td style="border: 1px solid #ccc; padding: 5px;">Quaternion (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x32-0x33</td><td style="border: 1px solid #ccc; padding: 5px;">MPU Temperature</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Packed Hundredths (C)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x34-0x35</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Gyro (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (Degrees/sec in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x36-0x37</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Gyro (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (Degrees/sec in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x38-0x39</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Gyro (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (Degrees/sec in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x3A-0x3B</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Acceleration (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (G in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x3C-0x3D</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Acceleration (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (G in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x3E-0x3F</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Acceleration (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (G in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x40-0x41</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Magnetometer (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (uTesla in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x42-0x43</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Magnetometer (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (uTesla in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x44-0x45</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Magnetometer (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short (uTesla in device units)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x46-0x49</td><td style="border: 1px solid #ccc; padding: 5px;">Barometric Pressure</td><td style="border: 1px solid #ccc; padding: 5px;">16:16 float (millibars)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x4A-0x4B</td><td style="border: 1px solid #ccc; padding: 5px;">Pressure Sensor Temperature</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Packed Hundredths (C)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x4C-0x4D</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Yaw Offset</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Hundredths (Degrees)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x4E-0x4F</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Offset (W)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x50-0x51</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Offset (X)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x52-0x53</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Offset (Y)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;">0x54-0x55</td><td style="border: 1px solid #ccc; padding: 5px;">Calibrated Quaternion Offset (Z)</td><td style="border: 1px solid #ccc; padding: 5px;">Signed Short Ratio (Ratio)</td></tr>  </table></p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FI2C_SPI_Protocols&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FI2C_SPI_Protocols"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="https://code.google.com/p/navx-mxp/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="I2C_SPI_Protocols" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="https://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="https://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/I2C_SPI_Protocols by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:35 GMT -->
+</html>
+
+

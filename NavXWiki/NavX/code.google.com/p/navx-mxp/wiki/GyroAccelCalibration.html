@@ -1,0 +1,453 @@
+
+
+
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/GyroAccelCalibration by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="GyroAccelCalibration.html" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"projectName": "navx-mxp", "loggedInUserEmail": null, "token": null, "projectHomeUrl": "/p/navx-mxp", "profileUrl": null, "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/18133036155640238800", "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "domainName": null, "relativeBaseUrl": ""};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-46776614-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>GyroAccelCalibration - 
+ navx-mxp -
+ 
+ 
+ navX MXP Open-source Robotics Navigation sensor - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="https://code.google.com/feeds/p/navx-mxp/svnchanges/basic?path=/wiki/GyroAccelCalibration.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/18133036155640238800/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(../../../../ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "../../../../apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FGyroAccelCalibration&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FGyroAccelCalibration" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="https://code.google.com/p/navx-mxp">
+ <a href="https://code.google.com/p/navx-mxp/">
+ 
+ 
+ <img src="https://code.google.com/p/navx-mxp/logo?cct=1417555830"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="https://code.google.com/p/navx-mxp/"><span itemprop="name">navx-mxp</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="https://code.google.com/p/navx-mxp/"><span itemprop="description">navX MXP Open-source Robotics Navigation sensor</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="https://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="https://code.google.com/p/navx-mxp/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="TableOfContents9f2d.html?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/navx-mxp/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="https://code.google.com/p/navx-mxp/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+ 
+ style="padding:0 3px 3px 0; margin:0"
+ 
+ 
+>
+
+ 
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer {
+ padding: 1.5em 2px 2px 2px;
+ min-width: 15em;
+ max-width: 20em;
+ overflow:hidden;
+}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(../../../../ssl.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(../../../../ssl.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { 
+ font-weight: bold;
+ text-decoration: none;
+ color: black !important; 
+ background: #c3d9ff;
+ }
+ .sidebartop ul.treeleafcontainer { display:block;}
+ .sidebarcontent { 
+ vertical-align:top;
+ padding-right: 3px;
+ border-right: 2px solid #ccc;
+ }
+</style>
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td class="sidebarcontent">
+ <div class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right;">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Hide sidebar"><b>&lsaquo;&lsaquo;</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar(this); return false;"
+ title="Show sidebar"><b>&rsaquo;&rsaquo;</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <p><strong> Getting Started </strong></p><ul><li><a href="Purchasing.html" rel="nofollow">Where to Buy</a> </li></ul><ul><li><a href="http://kauailabs.com/wp-content/uploads/2014/12/navX_MXP_Datasheet.pdf" rel="nofollow">Datasheet</a> </li></ul><ul><li><a href="FAQ.html">Frequently Asked Questions</a> </li></ul><ul><li><a href="RoboRioInstall.html">Plug-n-Play Installation</a> </li></ul><ul><li><a href="MXPIOExpansion.html">I/O Expansion</a> </li></ul><ul><li><a href="Orientation.html">Orientation</a> </li></ul><ul><li><a href="AdvancedInstallOptions.html">Alternative Installation Options</a> </li></ul><ul><li><a href="GyroAccelCalibration.html">Gyro/Accelerometer Calibration</a> </li></ul><ul><li><a href="Calibration.html">Magnetometer Calibration</a> </li></ul><ul><li><a href="navXMXPUI.html">The navX MXP UI</a> </li></ul><ul><li><a href="Enclosure.html">Creating an Enclosure</a> </li></ul><ul><li><a href="Acknowledgements.html">Acknowledgements</a> </li></ul><p><strong> FRC Software Libraries </strong></p><ul><li><a href="CPlusPlus.html">C++</a> </li></ul><ul><li><a href="Java.html">Java</a> </li></ul><ul><li><a href="Labview.html">Labview</a> </li></ul><ul><li><a href="IMUClass.html">The IMU class</a> </li></ul><ul><li><a href="IMUAdvanced.html">The IMUAdvanced class</a> </li></ul><p><strong> Application Examples </strong></p><ul><li><a href="FieldOrientedDrive.html" rel="nofollow">Field-oriented Drive</a> </li></ul><ul><li><a href="AutoBalancingExample.html">Automatic Balancing</a> </li></ul><ul><li><a href="RotateToAngleExample.html">Rotating to a given Angle</a> </li></ul><ul><li><a href="MotionDetection.html">Motion/No-Motion Detection</a> </li></ul><p><strong> Customization and Troubleshooting </strong></p><ul><li><a href="FirmwareInstallation.html">Firmware Installation</a> </li></ul><ul><li><a href="Troubleshooting.html">Troubleshooting</a> </li></ul><ul><li><a href="FactoryTestProcedure.html" rel="nofollow">Factory Test Procedure</a> </li></ul><ul><li><a href="Support.html">Support</a> </li></ul><p><strong> Advanced Topics </strong></p><ul><li><a href="Specifications.html">Specifications</a> </li></ul><ul><li><a href="SerialProtocolBasic.html">Serial Protocol (Basic)</a> </li></ul><ul><li><a href="https://code.google.com/p/navx/wiki/YawDrift" rel="nofollow">Yaw Drift</a> </li></ul><ul><li><a href="SerialProtocolAdvanced.html">Serial Protocol (Advanced)</a> </li></ul><ul><li><a href="I2C_SPI_Protocols.html">I2C/SPI Protocols</a> </li></ul><ul><li>Advanced Configuration </li></ul><ul><li><a href="References.html">References</a> </li></ul><p><strong> For the Adventurous </strong></p><ul><li><a href="FirmwareCustomization.html">Firmware Customization</a> </li></ul>
+ </div>
+ </div>
+</div>
+
+ </td>
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">GyroAccelCalibration</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Thu Jan 15 09:10:35 2015">
+ Today (5 hours ago)</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="https://code.google.com/u/104705105116845524465/">scottlib...@gmail.com</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h1><a name="Overview"></a>Overview<a href="#Overview" class="section_anchor"></a></h1><p>The navX MXP onboard sensors require calibration in order to yield optimal results.  We highly recommend taking the time to understand this calibration process - successful calibration is vital to ensure optimal performance. </p><p><i> Accurate Gyroscope Calibration is crucial in order to yield valid yaw angles.  Although this process occurs automatically, understanding how it works is required to obtain the best results. </i> </p><p><i> If you are tempted to ignore this information, please read the section entitled &quot;The Importance of Stillness&quot; at the end of this page. </i> </p><h1><a name="Gyroscope/Accelerometer_Calibration"></a>Gyroscope/Accelerometer Calibration<a href="#Gyroscope/Accelerometer_Calibration" class="section_anchor"></a></h1><p><img src="../../../../navx-mxp.googlecode.com/svn/trunk/images/CalibrationProcess.png" /> </p><h3><a name="Initial_Gyro_Calibration"></a>Initial Gyro Calibration<a href="#Initial_Gyro_Calibration" class="section_anchor"></a></h3><p>Before navX MXP units are shipped, the accelerometers and gyroscopes are initially calibrated at the factory; this calibration data is stored in flash memory and applied automatically to the accelerometer and gyroscope data each time the navX MXP is powered on.   </p><p>Note that the onboard gyroscopes are sensitive to temperature changes.  Therefore, since the average ambient temperature at the factory (on the island of Kauai in Hawaii) may be different than in your environment, you can optionally choose to re-calibrate the gyroscope by pressing and holding the &quot;CAL&quot; button for at least 10 seconds.  When you release the &quot;CAL&quot; button, ensure that the &quot;CAL&quot; Led flashes briefly, and then press the &quot;RESET&quot; button to restart the navX MXP.  When the navX MXP is re-started, it will perform the Initial Gyro Calibration - the same process that occurs at our factory.  <i>NOTE:  It is very important to hold the navX MXP still, and parallel to the earth&#x27;s surface, during this Initial Gyro Calibration period.</i>  You might consider performing this process before using your robot the first time it is used within a new environment (e.g., when you arrive at a FRC competition event). </p><p>The value of calibrating the gyroscope at the same temperature the navX MXP will be operated at is increased yaw accuracy.  If a significant temperature shift has occurred, the yaw accuracy will be diminished until the next On-the-fly Gyro Calibration completes. </p><h3><a name="On-the-fly_Gyro_Calibration"></a>On-the-fly Gyro Calibration<a href="#On-the-fly_Gyro_Calibration" class="section_anchor"></a></h3><p>In addition to Initial Gyroscope Calibration, during normal operation the navX MXP will automatically re-calibrate the gyroscope (e.g., to account for ongoing temperature changes) during operation, whenever it detects 8 seconds of no motion.  This process completes after about 7-8 more seconds.  Therefore each time the navX MXP is still for approximately 15 seconds, the gyroscopes are re-calibrated &quot;on-the-fly&quot;.  This re-calibration can help maintain yaw accuracy when shifts in ambient temperature occur. </p><p>In a typical FIRST FRC competition match, this means that the gyroscope/accelerometers are automatically re-calibrated at the beginning of a match, between the time when the robot is powered on and when the match actually starts. </p><h3><a name="Initial_Yaw_Offset_Calibration"></a>Initial Yaw Offset Calibration<a href="#Initial_Yaw_Offset_Calibration" class="section_anchor"></a></h3><p>In addition to Gyroscope and Accelerometer calibration, an <strong>Initial Yaw Offset</strong> is automatically calculated each time the navX MXP starts up.  The purpose of the Initial Yaw Offset is to ensure that whatever direction the &quot;front&quot; of the navX MXP board is pointed to at startup (after initial calibration is applied) will be considered &quot;0 degrees&quot;. </p><p>Yaw Offset Calibration requires that the navX MXP be still for approximately 2 seconds after it starts and initial calibration is applied.  After approximately 2 seconds of no motion, the navX MXP will acquire the current yaw angle, and will subtract it from future yaw measurements automatically.  The navX MXP protocol includes a way to determine the yaw offset value it is currently using. </p><p><i> NOTE:  If the navX MXP is moving during initial calibration, this Yaw Offset Calibration may take much longer than 2 seconds.  Therefore it is important to keep the navX MXP still until initial calibration and Yaw Offset calibration completes. </i> </p><h3><a name="Runtime_Yaw_Zeroing"></a>Runtime Yaw Zeroing<a href="#Runtime_Yaw_Zeroing" class="section_anchor"></a></h3><p>Your robot software can optionally provide the robot operator a way to reset the yaw angle to Zero at any time.  Please see the documentation for the navX MXP libraries for more details. </p><h3><a name="The_importance_of_stillness"></a><i>The importance of stillness</i><a href="#The_importance_of_stillness" class="section_anchor"></a></h3><p>This is the most important takeaway from this discussion:  It is very important that the navX MXP be held still during the above Initial Gyro and Initial Yaw Offset calibration periods.  In support of this, the navX MXP indicates when it is calibrating; we recommend you incorporate this information into your software.  Please see the discussion of the navXMXP UI, and the navX MXP libraries for more details on this indication. </p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FGyroAccelCalibration&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fnavx-mxp%2Fwiki%2FGyroAccelCalibration"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="https://code.google.com/p/navx-mxp/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="GyroAccelCalibration" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="../../../../ssl.gstatic.com/codesite/ph/18133036155640238800/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="https://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="https://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+
+<!-- Mirrored from code.google.com/p/navx-mxp/wiki/GyroAccelCalibration by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jan 2015 22:40:25 GMT -->
+</html>
+
+
